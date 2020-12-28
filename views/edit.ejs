@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <title>Change New Restaurant</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+  </head>
+  <body>
+    <div class="w3-container w3-teal">
+      <h1>Modify Restaurant test</h1>
+    </div>
+    <form class="w3-container" action="/change" method="post" enctype="multipart/form-data" style="width:100%">
+      <p>
+        <input type="hidden" name="_id" value="<%= restaurant._id %>">
+        <input type="hidden" name="ower" value="<%= restaurant.ower %>">
+        <input class="w3-input" required name="name" type="text" value="<%= restaurant.name %>">
+        <label class="w3-label w3-validata">Name</label>
+      </p>
+
+      <p>
+        <input class="w3-input" name="borough" type="text" value="<%= restaurant.borough %>">
+        <label class="w3-label w3-validata">Borough</label>
+      </p>
+
+      <p>
+        <input class="w3-input" name="cuisine" type="text" value="<%= restaurant.cuisine %>">
+        <label class="w3-label w3-validata">Cuisine</label>
+      </p>
+      <p>
+        <input class="w3-input" name="street" type="text" value="<%= restaurant.address.street %>">
+        <label class="w3-label w3-validata">Street</label>
+      </p>
+      <p>
+        <input name="building" class="w3-input" type="text" value="<%= restaurant.address.building %>">
+        <label class="w3-label w3-validate">Building</label>
+      </p>
+      <p>
+        <input name="zipcode" class="w3-input" type="text" value="<%= restaurant.address.zipcode %>">
+        <label class="w3-label w3-validate">Zipcode</label>
+      </p>
+      <p>
+        <input name="lon" class="w3-input" type="text" value="<%= restaurant.address.coord[0] %>">
+        <label class="w3-label w3-validate">GPS Coordinates (lon.)</label>
+      </p>
+      <p>
+        <input name="lat" class="w3-input" type="text" value="<%= restaurant.address.coord[1] %>">
+        <label class="w3-label w3-validate">GPS Coordinates (lat.)</label>
+      </p>
+      <p>
+        <input name="sampleFile" class="w3-input" type="file">
+        <label class="w3-label w3-validate">Photo</label>
+      </p>
+      <p>
+        <button class="w3-btn w3-section w3-teal w3-ripple"> Change </button>
+      </p>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Rate</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    </head>
+    <body data-new-gr-c-s-check-loaded="14.988.0" data-gr-ext-installed>
+        <div class="w3-container w3-teal">
+            <h2>Rate</h2>
+        </div>
+        <p>
+        </p>
+        <form class="w3-container" action="/rating">
+            <label>Score(1-10):</label>
+            <input class="w3-input" type="number" name="score" min="1" max="10">
+	    <p></p>
+	    <input type="hidden" name="ower" value="<%= user %>">
+	    <input type="hidden" name="_id" value="<%= restaurant %>">
+	    <p></p>
+            <button class="we-btn">Rate</button>
+        </from>
+    </body>
+</html>
+
